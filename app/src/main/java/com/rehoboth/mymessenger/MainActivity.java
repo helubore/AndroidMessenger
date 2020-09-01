@@ -17,14 +17,16 @@ public class MainActivity extends Activity {
 
     public void onSendMessage(View view){
         EditText editText = (EditText) findViewById(R.id.message);
-        TextView tview = (TextView) findViewById(R.id.textView);
-        String message = editText.getText().toString();
+        EditText editEmail = (EditText) findViewById(R.id.email);
 
-        tview.setText(message);
+        String message = editText.getText().toString();
+        String email = editEmail.getText().toString();
+
 
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent.setType("text/plain");
         intent.putExtra(Intent.EXTRA_TEXT,message);
+        intent.putExtra(Intent.EXTRA_EMAIL,email);
         startActivity(intent);
 
     }

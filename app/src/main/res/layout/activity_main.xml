@@ -10,13 +10,24 @@
 
 
     <EditText
-        android:id="@+id/message"
+        android:id="@+id/email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="textEmailAddress"
         android:hint="@string/edit_text_hint"/>
+
+    <EditText
+        android:id="@+id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="0px"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:inputType="textAutoComplete"
+        android:layout_weight="1"
+        android:gravity="top"
+        android:hint="@string/edit_text_hint_message"/>
 
     <Button
         android:id="@+id/sendMessage"
@@ -24,11 +35,7 @@
         android:layout_height="wrap_content"
         android:onClick="onSendMessage"
         android:layout_marginTop="15dp"
-        android:text="@string/btn_send" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:text="@string/btn_send"
+        android:layout_gravity="right"/>
 
 </LinearLayout>
